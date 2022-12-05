@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+    <script>
+      // document.write("<h1>2단</h1>");
+      // let i;
+      // for (let j = 1; j <= 9; j++) {
+      //   i = 2 * j;
+      //   document.write("2X" + j + "=" + i + "<br>");
+      // }
+
+      // for (i = 2; i <= 19; i++) {
+      //   document.write("<h1>" + i + "단</h1>");
+      //   for (let j = 1; j <= 9; j++) {
+      //     k = i * j;
+      //     document.write(i + "X" + j + "=" + k + "<br>");
+      //   }
+      // }
+
+      let str = "";
+      for (i = 2; i <= 19; i++) {
+        str += "<div>";
+        str += "<h1>" + i + "단</h1>";
+        for (let j = 1; j <= 9; j++) {
+          k = i * j;
+          str += i + "X" + j + "=" + i * j + "<br>";
+        }
+        str += "</div>";
+      }
+      document.write(str);
+    </script>
+  </head>
+  <body></body>
+</html>

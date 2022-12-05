@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+    <script>
+      function a() {
+        // 특정작업 'a'를 수행
+        document.write("안녕하세요<br>");
+      }
+      a();
+
+      (function () {
+        document.write("안녕히가세요<br>");
+      })();
+      // -> 자기 호출 함수: 호출되지 않고 자동으로 됨 표현식 뒤에 (),
+      //  함수 선언 자체를 호출할 수 없어 함수식임으로 나타내려면 함주의 괄호 추가해야함
+
+      function b() {
+        for (let i = 1; i <= 5; i++) {
+          document.write("감사합니다<br>");
+        }
+      }
+      b();
+
+      function c(name, area) {
+        document.write(name + "님은 " + area + "에 살고 있습니다" + "<br>");
+      }
+      c("폴리", "텍사스");
+
+      function d(num) {
+        document.write(num * num + "<br>");
+      }
+      d(5);
+
+      function e(x, y) {
+        return x * y;
+      }
+      document.write(e(3, 4) + "<br>");
+    </script>
+  </head>
+  <body>
+    <button onclick="a()">click</button>
+  </body>
+</html>

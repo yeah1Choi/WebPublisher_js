@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        // const=constant, 상수=항상같은 수, 변치 않는 값을 가진 변수, 값을 꼭 가져야하는 변수
+        const person = { 
+            firstname : "Yewon",
+            lastname : "Choi",
+            age : 25,
+            fullname : function() { return this.firstname + "" + this.lastname; }
+        };
+        // 가로 안에 있는 식을 닫으면 모든 식의 값이 도출이 안됨, 컴마로 입력해야함
+        // 변수 하나에 속성을 한번에 넣어줌, 풀어쓴다면 아래처럼
+        
+        let firstname = "Yewon";
+        let lastname = "Choi";
+        let age = "25";
+        let fullname = firstname + "" + lastname;
+
+        document.write(person.fullname() + "<br>"); 
+        //fullname은 메소드임으로 소가로를 같이 입력해줘야 메소드 값이 입력됨, 소가로가 없으면 메소드의 값이 도출이 안되며 식만 그대로 입력됨
+        
+        const cars = {}; // 변수를 선언한 후에 속할 속성들을 나중에 선언하는 이러한 방식도 있음
+        cars.model = "소형"; // 속성을 변수 안에 선언하는 방법이기때문에 전체 변수 선언을 cars.이런식으로 입력해야함
+        cars.price = "10000000";
+        cars.color = "black";
+        document.write(cars.model + "<br>");
+
+        const man = new Object(); // object개체로 선언하면 그 개체 안에 다양한 속성을 들어가지는 방식
+        man.firstname = "Paul";
+        man.middlename = "Daniel";
+        man.lastname = "Ayuyu";
+        document.write(man.firstname + "" + man.middlename + "" + man.lastname + "<br>"); 
+        // 불러올 속성변수들과의 사이에 ""를 넣어야 입력됨
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

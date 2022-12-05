@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal-popup</title>
+    <style>
+        #popup {
+            position: fixed;
+            left: 100px;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .pop {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="show()">open modal</button>
+    <div id="popup">
+        <div class="pop">
+            <p>contents</p>
+        </div>
+    </div>
+    <script>
+        let modal = document.getElementById("popup");
+        let btn = document.getElementById("btn");
+        modal.style.display = "none";
+        
+        btn.onclick = function() {
+            if(modal.style.display == "none") { // ==는 비교연산자: 동일
+            modal.style.display = "block";
+        }
+            else {
+            modal.style.display = "none";
+        }
+        } // -> 만약 modal이 안보이면 보이게하고 보이면 안보이게 
+    </script>
+</body>
+</html>

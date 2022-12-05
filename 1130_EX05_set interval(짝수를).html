@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let i = 0;
+      function a() {
+        if (i == 10) return;
+        i++;
+        if (i % 2 == 1) {
+          // 조건식: 홀수만 입력
+          document.write(i + "<br>");
+        }
+      }
+      setInterval(function () {
+        a();
+      }, 1000);
+    </script>
+  </head>
+  <body></body>
+</html>

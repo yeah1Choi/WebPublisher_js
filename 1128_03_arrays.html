@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = ["one", 100, "two", 200];
+        document.write(arr[0] + "<br>");
+
+        const arr1 = [
+            "one", 
+            100, 
+            "two", 
+            200
+        ];
+        document.write(arr1 + "<br>");
+        arr1[4] = "three"; // 인덱스 추가하기
+        document.write(arr1 + "<br>");
+
+        const arr2 = [];
+            arr2[0] = "one"; // 인덱스는 0부터 시작
+            arr2[1] = 100;
+            arr2[2] = "two";
+            arr2[3] = 200;
+            document.write(arr2[0] + "<br>");
+            arr2[4] = arr2.length // length = 배열의 길이=배열 요소의 수
+            document.write(arr2[4] + "<br>"); // 결과 값 => 4
+
+        const arr3 = new Array(4); // 함수 소괄호의 숫자 4 = 데이터 갯수
+            arr3[0] = "one";
+            arr3[1] = 100;
+            arr3[2] = "two";
+            arr3[3] = 200;
+        document.write(arr3[0] + "<br>");
+
+        const arr4 = new Array("one", 100, "two", 200);
+        document.write(arr4[0] + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

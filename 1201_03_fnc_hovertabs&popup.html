@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+      #tab_wrap {
+        border: 1px solid #ccc;
+        width: 25%;
+        border-right: none;
+      }
+      .tablink {
+        height: 60px;
+        line-height: 60px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .tablink:hover {
+        background-color: #eee;
+      }
+      .tabcontent {
+        width: 75%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tab_wrap">
+      <p class="tablink" onmouseover="tab(0)">content1</p>
+      <p class="tablink" onmouseover="tab(1)">content2</p>
+      <p class="tablink" onmouseover="tab(2)">content3</p>
+      <p class="tablink" onmouseover="tab(3)">content4</p>
+    </div>
+    <div class="tabcontent">
+      <h1>content 1</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 2</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 3</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 4</h1>
+    </div>
+    <script>
+      window.open("1201_01_fnc.html", "함수연습", "width=500, height=500");
+      let content = document.getElementsByClassName("tabcontent");
+      let btn = document.getElementsByClassName("tablink");
+      function tab(j) {
+        for (let i = 0; i < btn.length; i++) {
+          content[i].style.display = "none";
+          content[j].style.display = "block";
+        }
+      }
+      tab(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = prompt("점수를 입력해 주세요");
+        let b = confirm("당신이 입력한 점수는 " + a + "이 맞습니까?");
+        let score;
+        if(a >= 90) {
+            score = "A";
+        }
+        else if(a >= 80) { // 조건이 있는 다양한 eles를 만들때 else if(조건)
+            score = "B";
+        }
+        else if(a >= 70) {
+            score = "C";
+        }
+        else if(a >= 60) {
+            score = "D";
+        }
+        else { // 그 외의 if와 정반대의 값을 입력할 때 그냥 else
+            score = "F";
+        }
+        document.write("당신의 학점은 " + score + "입니다");
+    </script>
+</head>
+<body>
+</body>
+</html>

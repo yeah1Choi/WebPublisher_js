@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string</title>
+    <script>
+      let x = "hello";
+      let y = new String("hello");
+      let arr = ["one", 100, 200, 300]; // 밑의 방법 보단 이 방법이 선호됨 처리속도 빠름
+      let arr1 = new Array("one", 100, 200, 300);
+      console.log(x.length);
+
+      document.write(x.length + "<br>");
+      document.write(arr.length + "<br>");
+      document.write(x.slice(0, 4) + "<br>");
+      document.write(arr.slice(2, 3) + "<br>");
+      document.write(arr.slice(-3, -1) + "<br>"); //마이너스도 end는 큰 수가 들어가야함
+      document.write(x.substring(2, 4) + "<br>");
+      document.write(x.substr(2, 4) + "<br>");
+      document.write(x.substr(-3, 4) + "<br>"); // substr(엔드번호,갯수)
+      // array가 substring이 안되는 건, substring은 문자객체의 시작에서 끝 인덱스 전까지의 문자열을 반환
+      // substr은 문자객체의 시작에서 몇개의 문자열을 반환
+    </script>
+  </head>
+  <body></body>
+</html>

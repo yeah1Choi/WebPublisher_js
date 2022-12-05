@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let age = prompt("당신의 나이는?","");
+        // document.write(typeof age + "<br>");
+
+        let kor = Number(prompt("국어점수는?",""));
+        let eng = Number(prompt("영어점수는?",""));
+        let mat = Number(prompt("수학점수는?",""));
+        let avg = Number((kor + eng + mat)/3);
+        let result = kor >= 60 && eng >= 60 && mat >= 60 && avg >= 60;
+
+        // document.write(typeof kor + "<br>");
+        // document.write(kor + eng, "<br>");
+        document.write("당신이 입력한 국어점수는 " + kor + "점이고 영어점수는 " + eng +  "점이며 수학점수는 " + mat + "점입니다.", "<br>");
+        document.write("당신의 총점은 ", kor + eng + mat,"점입니다.", "<br>");
+        //document.write("당신의 평균은 ", (kor + eng + mat)/3,"입니다.", "<br>");
+        document.write("당신의 평균은 ", avg.toFixed(2),"입니다.", "<br>");
+        document.write(avg >= 60 ? "합격" : "불합격", "<br>");
+        document.write(Number(result) + "<br>");
+        document.write(result ? "합격" : "불합격", "<br>");
+    </script>
+</head>
+<body> 
+    
+</body>
+</html>

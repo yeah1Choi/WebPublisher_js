@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+      function showtime() {
+        let a = new Date();
+        let time = a.toLocaleTimeString();
+        document.getElementById("div").innerText = time; //innerText는 안의 내용만 바꿔줌
+      }
+      let interval = setInterval(showtime, 1000); // setinterval은 이렇게 간단히 입력가능
+      showtime();
+      document.getElementById("stop").onclick = function () {
+        // 직접 button에 onclick속성을 부여하는 것보다 복잡한 실행은 따로 아이디로 선언하는게 좋음
+        clearInterval(interval); // interval의 중단은 clearinterval으로
+      };
+      document.getElementById("start").onclick = function () {
+        setInterval(showtime, 1000);
+      };
+    </script>
+  </body>
+</html>

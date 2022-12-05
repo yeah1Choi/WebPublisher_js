@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Break 구문 ->>
+      let text = "";
+      for (let i = 0; i < 10; i++) {
+        if (i === 3) {
+          break;
+        } // 조건식: i가 동일한 값과 유형일 때 break구문으로 반복 중단
+        text += "The number is " + i + "<br>";
+      }
+      document.write(text);
+
+      let text2 = "";
+      let j = 9;
+      do {
+        text2 += "<br>The number is " + j + "<br>";
+        j--;
+        if (j == 0) break;
+      } while (j < 10);
+      document.write(text2);
+
+      // Continue 구문 ->> 지정된 조건이 발행하면 반복 하나를 중단하고 그 다음 반복을 계속함
+      let text3 = "";
+      for (let k = 2; k < 10; k++) {
+        if (k === 3) {
+          continue;
+        }
+        text3 += "This number is " + k + "<br>";
+      }
+      document.write(text3);
+    </script>
+  </head>
+  <body></body>
+</html>

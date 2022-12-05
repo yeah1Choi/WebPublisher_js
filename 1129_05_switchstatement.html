@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let area = prompt("지역을 입력해 주세요");
+        let area_num;
+        
+        switch(area) {
+            case "서울":
+            case "seoul":
+            case "Seoul":
+            case "SEOUL": // 다양한 도출값을 적용할 수 있게함
+                area_num = "02";
+                area = "서울"; // 다양한 도출값이 그대로 document되지 않고 지정함
+                break; 
+            case "대전":
+            case "daejeon":
+            case "Daejeon":
+            case "DAEJEON":
+                area_num = "420";
+                area = "대전";
+                break;
+            case "부산":
+            case "busan":
+            case "Busan":
+            case "BUSAN":
+                area_num = "051";
+                area = "부산";
+                break;
+            default:
+                area_num = "등록되지 않은 지역";
+        }
+
+        document.write("입력하신 지역은 " , area , "이고 지역번호는 " , area_num , "입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

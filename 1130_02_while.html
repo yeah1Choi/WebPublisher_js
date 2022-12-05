@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while loop</title>
+    <script>
+      let text = "";
+      let i = 0; // 초기값 설정
+
+      // while(조건) {반복할 실행문} 조건식이 true이면 실행 false이면 미실행
+      // 기존의 for구문과 다르게 초기값, 증감식 정의 필수가 아님
+      // ->> 초기값을 저 앞에 미리 설정 후 증감식을 while문 내에서 작성
+      while (i < 10) {
+        // "i < 10" 조건식
+        text += i + "<br>";
+        i++;
+      }
+      document.write(text);
+
+      let text2 = "";
+      for (let i = 0; i < 10; i++) {
+        text2 += i + "<br>";
+      }
+      document.write(text2);
+    </script>
+  </head>
+  <body></body>
+</html>

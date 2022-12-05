@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //do while은 참 거짓이던 간에 무조건 한번 실행 후 조건식을 검사해 do의 중괄호 식의 반복을 결정함
+      let text = "";
+      let i = 0; // 초기값 설정
+      do {
+        text += "<br>The number is " + i; //실행문
+        i++; // 증감식
+      } while (i < 10); // 조건식
+      document.write(text);
+
+      let text2 = "";
+      let j = 9;
+      do {
+        text2 += "<br>The number is " + j;
+        j--;
+        if (j == 0) break;
+      } while (j < 10);
+      document.write(text2);
+    </script>
+  </head>
+  <body></body>
+</html>

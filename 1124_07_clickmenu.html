@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menuicon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: bisque;
+        }
+        #sidenav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: #111;
+            overflow: hidden; /* width가 0이라 hidden해주면 글자 사라짐 */
+            transition: 0.5s;
+        }
+        #sidenav ul {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #sidenav ul li {
+            line-height: 40px;
+        }
+        #sidenav ul li .close {
+            display: block;
+            text-align: right;
+        }
+        .menu {
+            cursor: pointer;
+            margin-left: 0;
+            padding: 20px 0 0 20px;
+            transition: 0.5s;
+        }
+        .menu > div {
+            width: 35px;
+            height: 5px;
+            background: darkblue;
+            margin: 6px 0;
+            transition: transform 0.5s;
+        }
+        .active .bar1 { /* 함수그룹을 먼저 입력하는 것은 x로 바뀌는 것을 함수를 실행했을때 이뤄지기 위해서 */
+            transform: translate(0, 11px) rotate(-45deg) ;
+        }
+        .active .bar2 {
+            opacity: 0; /* none으로 하면 아예 없었던 것이 되어 전체 좌표가 꼬이게 됨 */
+        }
+        .active .bar3 {
+            transform: translate(0, -11px) rotate(45deg) ;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidenav">
+        <ul>
+            <li><a href="#" class="close" onclick="hide()">x</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Client</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="menu" onclick="myfnc()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myfnc() {
+            document.getElementById("sidenav").style.width = "250px";
+            document.getElementsByClassName("menu")[0].style.marginLeft = "250px"; 
+        }
+        function hide() {
+            document.getElementById("sidenav").style.width = "0";
+            document.getElementsByClassName("menu")[0].style.marginLeft = "0"; 
+        }
+    </script>
+</body>
+</html>

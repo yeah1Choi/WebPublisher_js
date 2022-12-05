@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string</title>
+    <script>
+      let x = "hello";
+      let a = "world";
+      let y = new String("hello");
+      let arr = ["one", 100, 200, 300]; // 밑의 방법 보단 이 방법이 선호됨 처리속도 빠름
+      let arr1 = new Array("one", 100, 200, 300);
+
+      document.write(x.replace("he", "he") + "<br>");
+      document.write(x.concat(" ", a) + "<br>"); // concat 결합
+      document.write(x.concat(" people") + "<br>");
+      let b = "Microsoft and Microsoft and microsoft";
+      document.write(b.replace("microsoft", "w3school") + "<br>"); // 처음의 한 문자만 인식하고 바꿈(결과: w3school and Microsoft and microsoft)
+      document.write(b.replace(/microsoft/i, "window") + "<br>"); // /~/i 는 대소문자 구분 안함, 저 안의 문자를 따움표를 사용하지 않는 건 자체가 식이라서
+      document.write(b.replace(/microsoft/g, "window") + "<br>"); // /~/g 는 대소문자 구분함
+      document.write(b.replace(/Microsoft/g, "window") + "<br>");
+      document.write(b.replaceAll("microsoft", "window") + "<br>");
+      let c = b.replaceAll("microsoft", "w3school");
+      document.write(c + "<br>");
+      let d = c.replaceAll("Microsoft", "w3school");
+      document.write(d + "<br>");
+      document.write(b.toUpperCase() + "<br>");
+      document.write(b.toLowerCase() + "<br>");
+      let text = "             apple             ";
+      document.write(text.length + "<br>");
+      let text2 = text.trim();
+      let text3 = text.trimEnd();
+      document.write(text2 + "<br>");
+      document.write(text3.length + "<br>");
+      document.write(x.charAt(2) + "<br>");
+      document.write(x.charCodeAt(3) + "<br>");
+      document.write(x[2] + "<br>");
+      let txt = "nice to meet you";
+      let txt2 = txt.split(" ");
+      for (let i = 0; i <= 3; i++) {
+        document.write(txt2[i] + "<br>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

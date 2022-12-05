@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal-popup</title>
+    <style>
+        #popup {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .pop {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="show()">open modal</button>
+    <div id="popup">
+        <div class="pop">
+            <a href="javascript:void(0)" id="close">x</a> <!-- javascript:void(0)는 자바 실행을 취소로 돌려놓음 -->
+            <p>contents</p>
+        </div>
+    </div>
+    <script>
+        let modal = document.getElementById("popup");
+        modal.style.display = "none"; // 변수 let 안의 popup의 속성을 display:none 으로 함
+        function show() {
+            modal.style.display = "block";
+        }
+        close.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

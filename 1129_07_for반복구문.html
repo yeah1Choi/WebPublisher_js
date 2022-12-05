@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <script>
+        let arr = ["one", "two", "three", "four", "five", "six", "seven"];
+        let text = "";
+        text += arr[0] + "<br>";
+        text += arr[1] + "<br>";
+        text += arr[2] + "<br>";
+        text += arr[3] + "<br>";
+        text += arr[4] + "<br>";
+        text += arr[5] + "<br>";
+        text += arr[6] + "<br>";
+        document.write(text + "<br>");
+        let text2 = "";
+        let n = arr.length;
+        for(let i = 0; i < n; i++) { // for(초기값; 조건; 증감값), i++ =>> i = i + 1 : i출력후 +연산을 함
+            text += arr[i] + "<br>";
+        }
+       document.write(text2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

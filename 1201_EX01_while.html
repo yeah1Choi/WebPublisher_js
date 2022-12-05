@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .tabcontent {
+        color: #fff;
+        padding: 50px;
+        text-align: center;
+      }
+      .tablink {
+        float: left;
+        width: 25%;
+        color: #ddd;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabcontent">
+      <h1>content 1</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 2</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 3</h1>
+    </div>
+    <div class="tabcontent">
+      <h1>content 4</h1>
+    </div>
+    <p class="tablink" onclick="tab(0)">content1</p>
+    <p class="tablink" onclick="tab(1)">content2</p>
+    <p class="tablink" onclick="tab(2)">content3</p>
+    <p class="tablink" onclick="tab(3)">content4</p>
+    <script>
+      let chcolor = ["red", "orange", "green", "blue"];
+      let content = document.getElementsByClassName("tabcontent");
+      let btn = document.getElementsByClassName("tablink");
+      function tab(j) {
+        let i = 0;
+        do {
+          // 여기서 그냥 while이 아니라 do while을 사용한 것은 실행구문을 먼저 실행해봐야 하기때문에
+          content[i].style.backgroundColor = chcolor[i];
+          btn[i].style.backgroundColor = chcolor[i];
+          content[i].style.display = "none";
+          content[j].style.display = "block";
+          i++; // 실행구문을 모두 거친 후 더해야 실행됨 <-증감은 실행문을 거친뒤에야 가능 이것 뿐만아니라 모든 do while이 그래야함
+        } while (i <= 3);
+      }
+      tab(0);
+    </script>
+  </body>
+</html>
