@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 선택자</title>
+    <style></style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        // $("li:first").css("border","1px solid #0f0")
+        // $("li:first-child").css("border", "1px solid #0f0");
+        // $("li:last").css("border", "1px solid #00f");
+        // $("li:even").css("border", "1px solid #f0f"); // 인덱스번호로 짝수만 적용->even
+        // $("li:odd").css("border", "1px solid #0ff"); // 인덱스번호로 홀수만 적용->odd
+        // $(".container p:first-of-type").css("border", "1px solid #ff0");
+        // $("p:nth-last-child(1)").css("border", "1px solid #f00"); // 뒤에서부터 1(첫번쨰)를 찾음
+        // $("p:only-child").css("border", "1px solid #f00");
+        // $("p:only-of-type").css("border", "1px solid #f00");
+        // $(".container > p").css("border", "1px solid #f00");
+        // $(".container p").css("border", "1px solid #f00");
+        // $("ul + p").css("border", "1px solid #f00");
+        // $("ul ~ p").css("border", "1px solid #f00");
+        // $("li:eq(2)").css("border", "1px solid #f00");
+        // $("li:gt(2)").css("border", "1px solid #f00");
+        // $("li:lt(2)").css("border", "1px solid #f00");
+        // $("li:not(:lt(1))").css("border", "1px solid #f00");
+        $(":header").css("border", "1px solid #f00");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>h1 태그</h1>
+    <h2>h2 태그</h2>
+    <h3>h3 태그</h3>
+    <h4>h4 태그</h4>
+    <div class="container">
+      <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>css3</li>
+        <li>java</li>
+        <li>jquery</li>
+      </ul>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그</p></div>
+    <div class="div1">
+      <p>텍스트와 인라인속성을 가진 요소만 올 수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

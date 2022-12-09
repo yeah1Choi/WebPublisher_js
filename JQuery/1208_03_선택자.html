@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 선택자</title>
+    <style></style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //속성선택자
+        // [name = "value"]
+        // $('li[class="html"]').css("color", "orange"); // 따옴표는 중복 안됨
+        // $('img[alt="photo1"]').css("width", "100px");
+        // $('li[class^="css"]').css("color", "brown");
+        $('img[alt^="photo"]').css("width", "100px"); // li요소 중에서 class속성이 css로 시작하는 요소 선택
+        // $('li[class$="3"]').css("color", "yellow"); // li요소 중에서 class속성이 3으로 끝나는 요소 선택
+        // $('li[class$="as"]').css("color", "green"); // li요소 중에서 class속성에 as포함되어있는 요소 선택
+        // $(".container").children("p").text("자식요소입니다");
+        // $(".html").parent().css("color", "blue");
+        // $(".html").parentsUntil("body").css("color", "blue");
+        // $(".html").next().css("color", "blue");
+        // $(".html").nextAll().css("color", "blue");
+        // $(".html").nextUntil(".css3").css("color", "blue");
+        // $(".java").prev().css("color", "blue");
+        // $(".container .css3").siblings().css("color", "blue");
+        // $(".container li:not('.css3')").css("color", "blue");
+        // $(".container li").not(".css3").css("color", "blue");
+        // $(".container li").filter(".css3").css("color", "blue");
+        // $(".container li").slice(".css3").css("color", "blue");
+        $(".container:has(p)").text("blank"); // .container 클래스 하위에 p 요소가 있을경우 .container클래스를 선택
+      });
+    </script>
+  </head>
+  <body>
+    <h1>h1 태그</h1>
+    <h2>h2 태그</h2>
+    <h3>h3 태그</h3>
+    <h4>h4 태그</h4>
+    <div class="container">
+      <ul>
+        <li class="html">html</li>
+        <li class="css">css</li>
+        <li class="css3">css3</li>
+        <li class="java">java</li>
+        <li class="jquery">jquery</li>
+      </ul>
+      <p><img src="../images/photo1.jpg" alt="photo1" /></p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그</p></div>
+    <div class="div1">
+      <p>텍스트와 인라인속성을 가진 요소만 올 수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

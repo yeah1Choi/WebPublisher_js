@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 선택자</title>
+    <style>
+      #p01 {
+        color: aquamarine;
+        background-color: beige;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <!-- <script src="../js/test.js"></script> -->
+    <script>
+      // $(document).ready(function () {
+      //   $("p").css("color", "#f00");
+      // });
+      // $(function() {
+      //   $("p").css("color", "#f00");
+      // });
+      $(function () {
+        // $("p01").css("color", "#0f0");
+        // $("div.txt").css("color", "#00f");
+        // $("#p01.txt").css("color", "#f00");
+        $("#p01")
+          .css("color", "#f00")
+          .css("fontSize", "24px")
+          .css("backgroundColor", "#ccc"); // style하고 jquery로 스타일 속성을 주면 jquery가 우선임
+        $(".txt").css({
+          color: "#f0f",
+          "font-size": "50px",
+          backgroundColor: "pink", // 스타일 속성이 한단어면 따움표가 딱히 필요없음, 하지만 속성값은 항상 필요함
+        }); // 소괄호 안에 대괄호를 넣으면 css처럼 ':'를 넣어 구분하여 기입함
+      });
+    </script>
+  </head>
+  <body>
+    <p>jQuery</p>
+    <p id="p01">jQuery</p>
+    <p class="txt">jQuery</p>
+    <div class="txt">div태그</div>
+    <!-- <script>
+      $("p").css("color", "#f00"); // body부문이 먼저 읽혀지면 function이 따로 필요하지 않음
+    </script> -->
+  </body>
+</html>
